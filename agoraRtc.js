@@ -7,7 +7,7 @@ let handlefail = function(err){
     console.log(err)
 }
 
-window.localStorage.setItem("count", "0"); 
+localStorage.setItem("count", "0"); 
 
 let client = AgoraRTC.createClient({
     mode: "live",
@@ -30,9 +30,9 @@ function removeVideoStream(evt) {
 
 function addVideoStream(streamId){
    
-    var newVal = parseInt(window.localStorage.getItem("count"));
-    window.localStorage.setItem("count", ++newVal);
-    console.log(window.localStorage.getItem("count")); 
+    var newVal = parseInt(localStorage.getItem("count"));
+    localStorage.setItem("count", ++newVal);
+    console.log(localStorage.getItem("count")); 
 
 
     if(window.localStorage["numPeople"] == "1"){
@@ -62,8 +62,8 @@ function addVideoStream(streamId){
         
     }
 
-    var newVal1 = parseInt(window.localStorage.getItem("count"));
-    window.localStorage.setItem("count", ++newVal1);
+    var newVal1 = parseInt(localStorage.getItem("count"));
+    localStorage.setItem("count", ++newVal1);
 
     /*
      var value = parseInt(localStorage.getItem("numPeople"));
