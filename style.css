@@ -1,0 +1,89 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Varela Round', sans-serif;
+}
+
+#container{
+    background-color:#B9D19B;
+}
+
+.flexContainer{
+    min-height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+
+}
+#centerPane{
+   
+    background-color: #FCF9F8; 
+    width: 525px; 
+    height: 550px;  
+    box-shadow: 0px 4px 52px rgba(0, 0, 0, 0.55);
+    border-radius: 10px; 
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+
+}
+
+#loginContainer{
+    display: flex; 
+    flex-direction: column;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    align-items: center;
+    justify-items: center;
+
+}
+
+#headingText{
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    margin-top: 80px;
+    color:white;
+   
+}
+
+#logo{
+    margin-top: 125px;
+    font-size: 3.6rem; 
+    margin-bottom: 35px;
+   
+}
+input{
+    border: 3px solid #CE796B;
+    width: 280px;
+    height: 30px; 
+    border-radius: 5px;
+    margin-bottom: 10px; 
+    font-size: 1.1rem; 
+    
+   
+    
+}
+.submitButton{
+    background-color: #CE796B;
+    width: 90px; 
+    height: 30px; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px; 
+    font-size: 1.1rem; 
+}
+
+#image{
+    width: 35px;
+    height: 35px; 
+}
+
+#instructions{
+    text-align:center;
+    font-size: 0.5rem; 
+    color: gray;
+}

@@ -1,0 +1,91 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Varela Round', sans-serif;
+    /*overflow-y: hidden;*/
+}
+
+#container{
+    background-color:#B9D19B;
+}
+
+.flexContainer{
+    display:flex; 
+    flex-direction: row;
+}
+#leftContainer{
+  
+    width: 975px; 
+    height: 775px; 
+    display:flex; 
+    flex-direction: column;
+}
+
+#firstRow{
+    display:flex; 
+    flex-direction: row;
+
+    align-items: left;
+    
+    /*
+    text-align: center; 
+    display: flex; 
+    justify-content: center; */
+   
+  
+}
+
+
+#selfStream{
+    width: 500px; 
+    height:400px;
+    margin: 0 auto;
+    margin-top: 30px;
+    border: 3px solid #CE796B;
+    border-radius: 10px;
+ 
+}
+/*
+#remoteStream1{
+    width: 300px; 
+    height: 275px;
+    margin-left:10px;
+    margin-right:10px;
+    margin-top: 30px; 
+    border: 3px solid #CE796B;
+    border-radius: 10px;
+    text-align:left; 
+}
+#remoteStream2{
+    width: 300px; 
+    height: 275px;
+    margin-left:10px;
+    margin-right:10px;
+    margin-top: 30px; 
+    border: 3px solid #CE796B;
+    border-radius: 10px;
+    text-align:left; 
+}
+#remoteStream3{
+    width: 300px; 
+    height: 275px;
+    margin-left:10px;
+    margin-right:10px;
+    margin-top: 30px; 
+    border: 3px solid #CE796B;
+    border-radius: 10px;
+    text-align:left; 
+}
+*/
+#rightContainer{
+    background-color:gray;
+    width: 465px; 
+    height: 770px;
+    display:flex; 
+    flex-direction: column; 
+}
+
+#controls{
+    background-color: blue;
+
+}

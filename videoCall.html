@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>Paple Video Call</title>
+    <link rel="stylesheet" href="videoStyle.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+</head>
+<body id="container">
+    <div class="flexContainer">
+        <div id="leftContainer">
+            <div id="selfStream">
+            </div>
+                <div id="firstRow">
+                    <div id="remoteStream1">
+
+                    </div>
+                    <!--<div id="remoteStream2">
+        
+                    </div>
+                    <div id="remoteStream3">
+
+                    </div>-->
+                </div>
+
+        </div>
+
+        <div id="rightContainer">
+            <div id="controls">
+                <button class="submitButton" id="leave" style="background-color:#ff0000">Leave</button>
+            </div>
+            <div id="participants">
+
+            </div>
+
+            <div id="notes">
+
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdn.agora.io/sdk/release/AgoraRTCSDK-3.0.0.js"></script>
+    <script src="agoraRtc.js"></script>
+</body>
+</html>
