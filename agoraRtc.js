@@ -1,11 +1,13 @@
+let appId = "3edc42e7f0fc43e9825e6395c030125c";
+let globalStream;
+let isAudioMuted = false;
+let isVideoMuted = false;
+
 let handlefail = function(err){
     console.log(err)
 }
 
-let appId = "3edc42e7f0fc43e9825e6395c030125c";
-let globalStream;
-let isAudioMuted= false;
-let isVidioMuted= false;
+window.localStorage.setItem("count", "0"); 
 
 let client = AgoraRTC.createClient({
     mode: "live",
@@ -15,35 +17,60 @@ let client = AgoraRTC.createClient({
 client.init(appId,() => console.log("AgoraRTC Client Connected"),handlefail
 )
 
-function removeMyVideoStream(){
+function removeMyVideoStream(streamId) {
     globalStream.stop();
 }
 
-function removeVideoStream(evt){
+function removeVideoStream(evt) {
     let stream = evt.stream;
-    stream.stop();
-    let remDiv = document.getElementById(stream.getId())
+    stream.stop;
+    let remDiv = document.getElementById(stream.getId());
     remDiv.parentNode.removeChild(remDiv);
 }
 
 function addVideoStream(streamId){
    
-    localStorage["numPeople"]++;
+    var newVal = parseInt(window.localStorage.getItem("count"));
+    window.localStorage.setItem("count", ++newVal);
+    console.log(window.localStorage.getItem("count")); 
 
-    console.log()
+
+    if(window.localStorage["numPeople"] == "1"){
+    let remoteContainer1 = document.getElementById("remoteStream1");
+    let streamDiv1 = document.createElement("div");
+    streamDiv1.id = streamId;
+    streamDiv1.style.transform = "rotateY(180deg)";
+    streamDiv1.style.height = "250px"
+    remoteContainer1.appendChild(streamDiv)
+    
+
+    }else if(window.localStorage["numPeople"] =="2"){
+    let remoteContainer2 = document.getElementById("remoteStream2");
+    let streamDiv2 = document.createElement("div");
+    streamDiv2.id = streamId;
+    streamDiv2.style.transform = "rotateY(180deg)";
+    streamDiv2.style.height = "250px"
+    remoteContainer2.appendChild(streamDiv)
+    
+    }else if(window.localStorage["numPeople"] =="3"){
+        let remoteContainer3 = document.getElementById("remoteStream3");
+        let streamDiv3 = document.createElement("div");
+        streamDiv3.id = streamId;
+        streamDiv3.style.transform = "rotateY(180deg)";
+        streamDiv3.style.height = "250px"
+        remoteContainer3.appendChild(streamDiv)
+        
+    }
+
+    var newVal1 = parseInt(window.localStorage.getItem("count"));
+    window.localStorage.setItem("count", ++newVal1);
+
     /*
-     
-      var value = parseInt(localStorage.getItem("count"));
+     var value = parseInt(localStorage.getItem("numPeople"));
     var newValue = value + 1
     localStorage.setItem("count", newValue);
-     let remoteContainer = document.getElementById("remoteStream1");
-    let streamDiv = document.createElement("div");
-    streamDiv.id = streamId;
-    streamDiv.style.transform = "rotateY(180deg)";
-    streamDiv.style.height = "250px"
-    remoteContainer.appendChild(streamDiv)*/
 
-    let remoteContainer = document.getElementById("firstRow");
+     let remoteContainer = document.getElementById("firstRow");
 
     let streamDiv = document.createElement("div");
     let spaceDiv = document.createElement("div");
@@ -93,8 +120,10 @@ function addVideoStream(streamId){
     remoteContainer.appendChild(spaceDiv);
     remoteContainer.appendChild(streamDiv);
     remoteData.appendChild(distanceSpace);
+     */
+
    
-   
+
 }
 
 document.getElementById("leave").onclick = function () {
@@ -105,11 +134,10 @@ document.getElementById("leave").onclick = function () {
     window.location.href = "index.html";
 
 }
-
-    let Username = localStorage["username"];
-    let channelName = localStorage["channelname"];
     
 
+let Username = localStorage.getItem("username");
+let channelName = localStorage.getItem("channelName");
     client.join(
         null,
         channelName,
@@ -120,14 +148,13 @@ document.getElementById("leave").onclick = function () {
                 audio: true,
             })
 
-            localStream.init(function(){
+            localStream.init(function(){   
                 localStream.play("selfStream")
                 console.log(`App id: ${appId}\nChannel id: ${channelName}`)
                 client.publish(localStream)
             })
 
             globalStream = localStream
-            localStorage["numPeople"] = 0;
           
         }
     )
@@ -152,12 +179,12 @@ document.getElementById("leave").onclick = function () {
 
 
 /*document.getElementById("video-mute").onclick = function(){
-    if(!isVidioMuted){
+    if(!isVideoMuted){
         globalStream.muteVideo();
-        isVidioMuted = true;
+        isVideoMuted = true;
     }else{
         globalStream.unmuteVideo();
-        isVidioMuted = false;
+        isVideoMuted = false;
     }
 }
 
