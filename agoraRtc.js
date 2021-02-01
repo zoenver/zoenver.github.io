@@ -35,7 +35,7 @@ function addVideoStream(streamId){
     console.log(localStorage.getItem("count")); 
 
 
-    if(window.localStorage["numPeople"] == "1"){
+    if(localStorage.getItem("count") == "1"){
     let remoteContainer1 = document.getElementById("remoteStream1");
     let streamDiv1 = document.createElement("div");
     streamDiv1.id = streamId;
@@ -44,7 +44,7 @@ function addVideoStream(streamId){
     remoteContainer1.appendChild(streamDiv)
     
 
-    }else if(window.localStorage["numPeople"] =="2"){
+    }else if(localStorage.getItem("count") == "2"){
     let remoteContainer2 = document.getElementById("remoteStream2");
     let streamDiv2 = document.createElement("div");
     streamDiv2.id = streamId;
@@ -52,7 +52,7 @@ function addVideoStream(streamId){
     streamDiv2.style.height = "250px"
     remoteContainer2.appendChild(streamDiv)
     
-    }else if(window.localStorage["numPeople"] =="3"){
+    }else if(localStorage.getItem("count") == "3"){
         let remoteContainer3 = document.getElementById("remoteStream3");
         let streamDiv3 = document.createElement("div");
         streamDiv3.id = streamId;
