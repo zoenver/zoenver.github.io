@@ -1,12 +1,13 @@
-let appId = "3edc42e7f0fc43e9825e6395c030125c";
-let globalStream;
-let isAudioMuted = false;
-let isVideoMuted = false;
+
 
 let handlefail = function(err){
     console.log(err)
 }
 
+let appId = "3edc42e7f0fc43e9825e6395c030125c";
+let globalStream;
+let isAudioMuted = false;
+let isVideoMuted = false;
 localStorage.setItem("count", "0"); 
 
 let client = AgoraRTC.createClient({
