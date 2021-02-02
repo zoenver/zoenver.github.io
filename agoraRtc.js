@@ -1,5 +1,3 @@
-
-
 let handlefail = function(err){
     console.log(err)
 }
@@ -31,9 +29,8 @@ function removeVideoStream(evt) {
 
 function addVideoStream(streamId){
    
-    var newVal = parseInt(localStorage.getItem("count"));
-    localStorage.setItem("count", ++newVal);
-    console.log(localStorage.getItem("count")); 
+    var i = +localStorage.getItem("count") +1;
+    localStorage.setItem("count", i); 
 
 
     if(localStorage.getItem("count") == "1"){
@@ -63,66 +60,8 @@ function addVideoStream(streamId){
         
     }
 
-    var newVal1 = parseInt(localStorage.getItem("count"));
-    localStorage.setItem("count", ++newVal1);
-
-    /*
-     var value = parseInt(localStorage.getItem("numPeople"));
-    var newValue = value + 1
-    localStorage.setItem("count", newValue);
-
-     let remoteContainer = document.getElementById("firstRow");
-
-    let streamDiv = document.createElement("div");
-    let spaceDiv = document.createElement("div");
-    let characterDiv = document.createElement("div");
-   
-    let distanceSpace = document.createElement("span");
-
-    streamDiv.id = streamId;
-    streamDiv.style.transform = "rotateY(180deg)";
-    streamDiv.style.height = "35vh";
-    streamDiv.style.width = "17vw";
-    streamDiv.style.textAlign = "left";
-    streamDiv.style.marginTop = "20px";
-    streamDiv.style.justifySelf = "center";
-
-    characterDiv.style.height = "30px";
-    characterDiv.style.width = "30px";
-
-    if(localStorage["numPeople"] % 4 === 1) {
-        streamDiv.style.border = "2px solid #DC143C";
-        //characterDiv.style.backgroundColor = "#DC143C";
-       
-        characterDiv.style.marginLeft = "80vw";
-    }
-    else if(localStorage["numPeople"] % 4 === 2) {
-        streamDiv.style.border = "2px solid #9932CC";
-       // characterDiv.style.backgroundColor = "#9932CC";
-       
-        characterDiv.style.marginLeft = "50vw";
-    }
-    else if(localStorage["numPeople"] % 4 === 3) {
-        streamDiv.style.border = "2px solid #DAA520";
-        //characterDiv.style.backgroundColor = "#DAA520";
-       
-        characterDiv.style.marginLeft = "60vw";
-    }
-    else {
-        streamDiv.style.border = "2px solid #F5DEB3";
-        //characterDiv.style.backgroundColor = "#F5DEB3";
-       
-        characterDiv.style.marginLeft = "30vw";
-    }
-
-    spaceDiv.style.width = "3vw";
-    distanceSpace.style.marginRight = "17vw";
-
-    remoteContainer.appendChild(spaceDiv);
-    remoteContainer.appendChild(streamDiv);
-    remoteData.appendChild(distanceSpace);
-     */
-
+    var i = +localStorage.getItem("count") +1;
+    localStorage.setItem("count", i); 
    
 
 }
