@@ -60,9 +60,8 @@ function addVideoStream(streamId){
         
     }
 
-    var i = +localStorage.getItem("count") +1;
+    i = +localStorage.getItem("count") +1;
     localStorage.setItem("count", i); 
-   
 
 }
 
