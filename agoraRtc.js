@@ -39,7 +39,7 @@ function addVideoStream(streamId){
     streamDiv1.id = streamId;
     streamDiv1.style.transform = "rotateY(180deg)";
     streamDiv1.style.height = "250px"
-    remoteContainer1.appendChild(streamDiv)
+    remoteContainer1.appendChild(streamDiv1)
     
 
     }else if(localStorage.getItem("count") == "2"){
@@ -48,7 +48,7 @@ function addVideoStream(streamId){
     streamDiv2.id = streamId;
     streamDiv2.style.transform = "rotateY(180deg)";
     streamDiv2.style.height = "250px"
-    remoteContainer2.appendChild(streamDiv)
+    remoteContainer2.appendChild(streamDiv2)
     
     }else if(localStorage.getItem("count") == "3"){
         let remoteContainer3 = document.getElementById("remoteStream3");
@@ -56,7 +56,7 @@ function addVideoStream(streamId){
         streamDiv3.id = streamId;
         streamDiv3.style.transform = "rotateY(180deg)";
         streamDiv3.style.height = "250px"
-        remoteContainer3.appendChild(streamDiv)
+        remoteContainer3.appendChild(streamDiv3)
         
     }
 
@@ -76,7 +76,7 @@ document.getElementById("leave").onclick = function () {
     
 
 let Username = localStorage.getItem("username");
-let channelName = localStorage.getItem("channelName");
+let channelName = localStorage.getItem("channelname");
     client.join(
         null,
         channelName,
