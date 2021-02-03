@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Varela Round', sans-serif;
-    overflow-y: hidden;
+    /*overflow-y: hidden;*/
 }
 
 #container{
@@ -17,8 +17,7 @@ body{
   
     width: 975px; 
     height: 775px; 
-    display:flex; 
-    flex-direction: column;
+   
 }
 
 #firstRow{
@@ -46,15 +45,20 @@ body{
  
 }
 
-#remoteStream1{
+.remoteStream{
+    display:inline-block;
+    text-align: left;
+    justify-self: center;
     width: 300px; 
     height: 275px;
     margin-left:10px;
     margin-right:10px;
     margin-top: 30px; 
-    border: 3px solid #CE796B;
-    border-radius: 10px;
-    text-align:left; 
+
+    
+    /*border: 3px solid #CE796B;
+    border-radius: 10px;*/
+   
 }
 #remoteStream2{
     width: 300px; 

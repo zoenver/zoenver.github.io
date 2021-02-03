@@ -6,7 +6,8 @@ let appId = "3edc42e7f0fc43e9825e6395c030125c";
 let globalStream;
 let isAudioMuted = false;
 let isVideoMuted = false;
-localStorage.setItem("count", "0"); 
+let i =0; 
+//localStorage.setItem("count", "0"); 
 
 let client = AgoraRTC.createClient({
     mode: "live",
@@ -28,8 +29,14 @@ function removeVideoStream(evt) {
 }
 
 function addVideoStream(streamId){
-   
-    var i = +localStorage.getItem("count") +1;
+    console.log()
+    let remoteContainer =document.getElementsByClassName("remoteStream")[i++];
+    let streamDiv =document.createElement("div");
+    streamDiv.id = streamId;
+    streamDiv.style.transform ="rotateY(180deg)";
+    streamDiv.style.height ="250px"; 
+    remoteContainer.appendChild(streamDiv); 
+    /*var i = +localStorage.getItem("count") +1;
     localStorage.setItem("count", i); 
 
 
@@ -61,18 +68,18 @@ function addVideoStream(streamId){
     }
 
     i = +localStorage.getItem("count") +1;
-    localStorage.setItem("count", i); 
+    localStorage.setItem("count", i); */
 
 }
 
-document.getElementById("leave").onclick = function () {
+/*document.getElementById("leave").onclick = function () {
     client.leave(function() {
         console.log("Left!")
     },handlefail)
     removeMyVideoStream();
     window.location.href = "index.html";
 
-}
+}*/
     
 
 let Username = localStorage.getItem("username");
