@@ -7,7 +7,7 @@ let globalStream;
 let isAudioMuted = false;
 let isVideoMuted = false;
 let i =0; 
-//localStorage.setItem("count", "0"); 
+ 
 
 let client = AgoraRTC.createClient({
     mode: "live",
@@ -36,50 +36,18 @@ function addVideoStream(streamId){
     streamDiv.style.transform ="rotateY(180deg)";
     streamDiv.style.height ="250px"; 
     remoteContainer.appendChild(streamDiv); 
-    /*var i = +localStorage.getItem("count") +1;
-    localStorage.setItem("count", i); 
-
-
-    if(localStorage.getItem("count") == "1"){
-    let remoteContainer1 = document.getElementById("remoteStream1");
-    let streamDiv1 = document.createElement("div");
-    streamDiv1.id = streamId;
-    streamDiv1.style.transform = "rotateY(180deg)";
-    streamDiv1.style.height = "250px"
-    remoteContainer1.appendChild(streamDiv1)
     
-
-    }else if(localStorage.getItem("count") == "2"){
-    let remoteContainer2 = document.getElementById("remoteStream2");
-    let streamDiv2 = document.createElement("div");
-    streamDiv2.id = streamId;
-    streamDiv2.style.transform = "rotateY(180deg)";
-    streamDiv2.style.height = "250px"
-    remoteContainer2.appendChild(streamDiv2)
-    
-    }else if(localStorage.getItem("count") == "3"){
-        let remoteContainer3 = document.getElementById("remoteStream3");
-        let streamDiv3 = document.createElement("div");
-        streamDiv3.id = streamId;
-        streamDiv3.style.transform = "rotateY(180deg)";
-        streamDiv3.style.height = "250px"
-        remoteContainer3.appendChild(streamDiv3)
-        
-    }
-
-    i = +localStorage.getItem("count") +1;
-    localStorage.setItem("count", i); */
 
 }
 
-/*document.getElementById("leave").onclick = function () {
+document.getElementById("leave").onclick = function () {
     client.leave(function() {
         console.log("Left!")
     },handlefail)
     removeMyVideoStream();
     window.location.href = "index.html";
 
-}*/
+}
     
 
 let Username = localStorage.getItem("username");
