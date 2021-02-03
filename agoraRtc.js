@@ -92,13 +92,15 @@ let channelName = localStorage.getItem("channelname");
         )
 
 
-/*document.getElementById("video-mute").onclick = function(){
+/document.getElementById("video-mute").onclick = function(){
     if(!isVideoMuted){
         globalStream.muteVideo();
         isVideoMuted = true;
+        console.log("video muted")
     }else{
         globalStream.unmuteVideo();
         isVideoMuted = false;
+        console.log("video unmuted")
     }
 }
 
@@ -106,8 +108,10 @@ document.getElementById("audio-mute").onclick = function(){
     if(!isAudioMuted){
         globalStream.muteAudio();
         isAudioMuted = true;
+        console.log("audio muted")
     }else{
         globalStream.unmuteAudio();
         isAudioMuted = false;
+        console.log("audio unmuted")
     }
-}*/
+}
