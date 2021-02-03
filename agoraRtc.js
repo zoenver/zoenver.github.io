@@ -36,6 +36,12 @@ function addVideoStream(streamId){
     streamDiv.style.transform ="rotateY(180deg)";
     streamDiv.style.height ="250px"; 
     remoteContainer.appendChild(streamDiv); 
+    let participants = document.getElementById("users");
+    let userSpan = document.createElement("span");
+    userSpan.textContent = username;
+    let newline = document.createElement("br");
+    participants.appendChild(newline);
+    participants.appendChild(userSpan);
     
 
 }
@@ -64,6 +70,10 @@ let channelName = localStorage.getItem("channelname");
 
             localStream.init(function(){   
                 localStream.play("selfStream")
+                let participants = document.getElementById("partiList");
+                let userSpan = document.createElement("span");
+                userSpan.textContent= Username;
+                 participants.appendChild(userSpan);
                 console.log(`App id: ${appId}\nChannel id: ${channelName}`)
                 client.publish(localStream)
             })
