@@ -92,7 +92,7 @@ let channelName = localStorage.getItem("channelname");
         )
 
 
-/document.getElementById("video-mute").onclick = function(){
+document.getElementById("video-mute").onclick = function(){
     if(!isVideoMuted){
         globalStream.muteVideo();
         isVideoMuted = true;
