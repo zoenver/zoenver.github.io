@@ -34,6 +34,12 @@ body{
   
 }
 
+ul {
+    list-style-type: none;
+    margin-left:20px; 
+    margin-top:10px; 
+   
+  }
 
 #selfStream{
     width: 500px; 
@@ -72,7 +78,7 @@ body{
   margin-top: 11px; 
   width: 450px; 
   height: 75px; 
-  background-color: white; 
+  background-color: #f4f3ee;
   margin-left: auto;
   margin-right: auto;
   justify-self: end;
@@ -87,19 +93,20 @@ body{
 
 #participants{
     width: 450px; 
-    height: 120px; 
+    height: 130px; 
    
     margin-left: auto;
     margin-right: auto;
     border-radius: 5px;
     border: 3px solid #CE796B;
-    background-color:white; 
+    background-color: #f4f3ee; 
+    margin-top: 10px;
 }
 #notes{
     width: 450px;
-    height: 400px; 
-    max-height: 400px;
-    background-color:white;
+    height: 470px; 
+    max-height: 470px;
+    background-color: #f4f3ee;
    
     margin-left: auto;
     margin-right: auto;
@@ -107,7 +114,7 @@ body{
     border: 3px solid #CE796B;
     overflow: auto;
 
-    
+    margin-top: 10px;
     
 }
 
@@ -138,6 +145,8 @@ body{
     font-size: 1rem;
     margin-left: auto; 
     margin-right: 10px; 
-    margin-top: 10px; 
+    margin-top: 15px; 
+    
+   
    
 }

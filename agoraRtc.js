@@ -7,6 +7,7 @@ let globalStream;
 let isAudioMuted = false;
 let isVideoMuted = false;
 let i =0; 
+
  
 
 let client = AgoraRTC.createClient({
@@ -35,14 +36,18 @@ function addVideoStream(streamId){
     streamDiv.id = streamId;
     streamDiv.style.transform ="rotateY(180deg)";
     streamDiv.style.height ="250px"; 
+    streamDiv.style.border ="3px solid #CE796B";
+    streamDiv.style.borderRadius ="10px";
     remoteContainer.appendChild(streamDiv); 
-    let participants = document.getElementById("users");
-    let userSpan = document.createElement("span");
-    userSpan.textContent = username;
-    let newline = document.createElement("br");
-    participants.appendChild(newline);
-    participants.appendChild(userSpan);
-    
+
+    var theDiv = document.getElementById("partiList");
+    var content = document.createTextNode(streamId);
+    theDiv.appendChild(content);
+
+    linebreak1 = document.createElement("br");
+    theDiv.appendChild(linebreak1);
+
+
 
 }
 
@@ -70,10 +75,12 @@ let channelName = localStorage.getItem("channelname");
 
             localStream.init(function(){   
                 localStream.play("selfStream")
-                let participants = document.getElementById("partiList");
-                let userSpan = document.createElement("span");
-                userSpan.textContent= Username;
-                 participants.appendChild(userSpan);
+                var names = document.createElement("LI"); 
+                var textnode = document.createTextNode(Username);
+                names.appendChild(textnode);
+                document.getElementById("partiList").appendChild(names);
+                 linebreak = document.createElement("br");
+                 names.appendChild(linebreak);
                 console.log(`App id: ${appId}\nChannel id: ${channelName}`)
                 client.publish(localStream)
             })
