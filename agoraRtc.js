@@ -8,7 +8,7 @@ let isAudioMuted = false;
 let isVideoMuted = false;
 let i =0; 
 
- 
+
 
 let client = AgoraRTC.createClient({
     mode: "live",
@@ -21,7 +21,6 @@ client.init(appId,() => console.log("AgoraRTC Client Connected"),handlefail
 function removeMyVideoStream(streamId) {
     globalStream.stop();
 }
-
 function removeVideoStream(evt) {
     let stream = evt.stream;
     stream.stop;
@@ -47,8 +46,6 @@ function addVideoStream(streamId){
     linebreak1 = document.createElement("br");
     theDiv.appendChild(linebreak1);
 
-
-
 }
 
 document.getElementById("leave").onclick = function () {
@@ -62,6 +59,7 @@ document.getElementById("leave").onclick = function () {
     
 
 let Username = localStorage.getItem("username");
+var textnode = document.createTextNode(Username);
 let channelName = localStorage.getItem("channelname");
     client.join(
         null,
@@ -76,7 +74,6 @@ let channelName = localStorage.getItem("channelname");
             localStream.init(function(){   
                 localStream.play("selfStream")
                 var names = document.createElement("LI"); 
-                var textnode = document.createTextNode(Username);
                 names.appendChild(textnode);
                 document.getElementById("partiList").appendChild(names);
                  linebreak = document.createElement("br");
