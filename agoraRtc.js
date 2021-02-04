@@ -9,7 +9,6 @@ let isVideoMuted = false;
 let i =0; 
 
 
-
 let client = AgoraRTC.createClient({
     mode: "live",
     codec: "h264"

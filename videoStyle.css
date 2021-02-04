@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Varela Round', sans-serif;
-    /*overflow-y: hidden;*/
+    overflow-y: hidden;
 }
 
 #container{
@@ -14,7 +14,6 @@ body{
     flex-direction: row;
 }
 #leftContainer{
-  
     width: 975px; 
     height: 775px; 
    
@@ -23,15 +22,9 @@ body{
 #firstRow{
     display:flex; 
     flex-direction: row;
-
     align-items: left;
-    
-    /*
-    text-align: center; 
-    display: flex; 
-    justify-content: center; */
-   
-  
+
+
 }
 
 ul {
@@ -60,14 +53,10 @@ ul {
     margin-left:10px;
     margin-right:10px;
     margin-top: 30px; 
-
-    
-    /*border: 3px solid #CE796B;
-    border-radius: 10px;*/
    
 }
 #rightContainer{
-   
+
     width: 465px; 
     height: 775px;
     display:flex; 
@@ -94,7 +83,6 @@ ul {
 #participants{
     width: 450px; 
     height: 130px; 
-   
     margin-left: auto;
     margin-right: auto;
     border-radius: 5px;
@@ -107,13 +95,11 @@ ul {
     height: 470px; 
     max-height: 470px;
     background-color: #f4f3ee;
-   
     margin-left: auto;
     margin-right: auto;
     border-radius: 5px;
     border: 3px solid #CE796B;
     overflow: auto;
-
     margin-top: 10px;
     
 }
@@ -141,7 +127,6 @@ ul {
     height: 15px; 
 }
 #logo{
-   
     font-size: 1rem;
     margin-left: auto; 
     margin-right: 10px; 
